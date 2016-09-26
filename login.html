@@ -8,34 +8,30 @@
     <title>99 verhalen</title>
 </head>
 
-<body>
-    <header>
-        <h1>Logo</h1>
-    </header>
+<body class="loginachtergrond">
     
 <main>
     <!-- Login formulier -->
-    <form>
-    <div class="Login">
-        <label>Gebruikersnaam</label>
-        <input type="text" placeholder="Voor gebruikersnaam in" name="uname" required>
-            <br>
-        <label>Wachtwoord</label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
-            <br>  
-        <button type="submit">Inloggen</button>
-            <br>    
-        <input type="checkbox" checked="checked"> Onthouden
-    </div>
     
-    <div class="aanmelden"> 
-            <br>
-        <span class="psw">Nog geen account? Druk<a href="#"> hier</a> om aan te melden</span>
-    </div>
+    <h1 class="logo1">99</h1>
+    <h1 class="logo2">VERHALEN</h1>
+    
+    <form method="post" action="index.html">
+<div class="box">
+<h5>Inloggen</h5>
 
-    <div class="vergeten"> 
-            <br>
-        <span class="psw"><a href="#">Wachtwoord vergeten? </a></span>
-    </div>
-    </form>
+<input type="email" name="email" value="email" class="invoer" />
+  
+<input type="password" name="wachtwoord" value="email" class="invoer" />
+  
+<a href="index.html"><div class="knop1">Inloggen</div></a> 
+
+<a href="index.html"><div class="knop2">Aanmelden</div></a> 
+  
+</div> <!-- End Box -->
+  
+</form>
+
+<p class="vergeten">Wachtwoord vergeten? <a class="klik" href="index.html">Klik hier!</a></p>
+        
 </main>

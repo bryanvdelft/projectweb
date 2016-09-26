@@ -8,72 +8,98 @@
     <title>99 verhalen</title>
 </head>
 <body>
-<header>
-    <h1>99 Verhalen</h1>
-    <nav>
-        <ul>
-			<li><a href="index.html">Verhalen</a></li>
-			<li><a href="info.html">Info</a></li>
-			<li><a href="contact.html">Contact</a></li>
-		</ul>
-	</nav>    
-</header>
     
-<input type="search" name="search" placeholder="Zoeken..">
+<header>
+<!-- http://tutorialzine.com/2015/02/freebie-7-responsive-header-templates/-->
+	<div class="header-text">
+
+		<h1><a href="index.html"><span class="nummer">99</span> Verhalen</a></h1>
+
+		<nav>
+			<a href="#" class="uitgelicht">Verhalen</a>
+			<a href="#">Info</a>
+			<a href="#">Account</a>
+            <a href="#">Contact</a>
+		</nav>
+	</div>
+
+</header>
+
+<!-- Zoek balk van :https://codepen.io/AustinAuth/pen/iksxo-->
+    
+  <form class="search-container">
+    <input type="text" id="search-bar" placeholder="Zoek op auteur, titel, enz?">
+    <a href="#"><img class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a>
+  </form>
     
 <section>
-    <!-- Filteren -->
-    <h2>Filteren</h2>
-    <!-- <h3>Genre</h3>
-        <form action="Genre">
-            <input type="checkbox" name="genre" value="fictie">Fictie
-            <br>
-            <input type="checkbox" name="genre" value="non-fictie">Non-fictie
-        </form>
-    <h3>Doelgroep</h3>
-        <form action="Doelgroep">
-            <input type="checkbox" name="doelgroep" value="Hele gezin">Hele gezin
-            <br>
-            <input type="checkbox" name="doelgroep" value="volwassenn">Volwassenen
-        </form> -->
+<div tabindex="0" class="onclick-menu">
+    <ul class="onclick-menu-content">
+        <li><button onclick="alert('click 1')">Aanraders</button></li>
+        <li><button onclick="alert('click 2')">A-Z</button></li>
+        <li><button onclick="alert('click 3')">Z-A</button></li>
+        <li><button onclick="alert('click 4')">Auteur</button></li>
+    </ul>
+</div> 
 </section>
 
-<!-- Artikelen -->
-<article>
-    <h4>Titel 1</h4>
-        <p>Door: Voornaam Achternaam,
-        <time>05 September, 2016</time>
-        </p>
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...."</p>
-				<a href="verhaal1.html"> Lees Verder.</a>
-</article>
+<aside class="trending">
+<h2>Trending</h2>
+<!-- trending -->
+<section class="verhalen">
+    <article>
+        <h4>Moe</h4>
+            <p>Door: Voornaam Achternaam,
+            <time>15 Maart, 2011</time>
+            </p>
+            <p>De buschauffeur port me wakker. We zijn bij de eindhalte, Centraal Station. Ik stap uit en duw de kinderwagen voort waarin mijn zoon ligt te slapen...</p>
+				<button class="leesverder">Lees Verder.</button>
+    </article>
+</section>
+</aside>
     
-<article>
-    <h4>Titel 2</h4>
-        <p>Door: Voornaam Achternaam,
-        <time>11 September, 2016</time>
-        </p>
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...."</p>
-				<a href="verhaal2.html"> Lees Verder.</a>
-</article>
-    
-<article>
-    <h4>Titel 3</h4>
-        <p>Door: Voornaam Achternaam,
-        <time>15 September, 2016</time>
-        </p>
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...."</p>
-				<a href="verhaal3.html"> Lees Verder.</a>
-</article>
-    
-<article>
-    <h4>Titel 4</h4>
-        <p>Door: Voornaam Achternaam,
-        <time>22 September, 2016</time>
-        </p>
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...."</p>
-				<a href="verhaal4.html"> Lees Verder.</a>
-</article>
 
+<h2>Verhalen</h2>
+<!-- Artikelen -->
+<section class="verhalen">
+    <article>
+        <h4>Stoned</h4>
+            <p>Door: Molovich,
+            <time>15 mei, 2011</time>
+            </p>
+            <p>Zodra ik de bus uitstap steek ik een dikke vette joint op. De derde van de dag al. Ik neem een lange haal, inhaleer diep, houd de rook een tijdje binnen...</p>
+				<button class="leesverder">Lees Verder.</button>
+    </article>
+    
+    <article>
+        <h4>Bejaard</h4>
+            <p>Door: Molovich,
+            <time>24 Mei, 2011</time>
+            </p>
+            <p> De chauffeur kijkt verveeld maar vooral ook licht geïrriteerd via zijn achteruitkijkspiegel toe hoe ik samen met mijn kleinzoon, die in zijn kinderwagen...</p>
+				<button class="leesverder">Lees Verder.</button>
+    </article>
+    
+    <article>
+        <h4>Voetbalanalisten</h4>
+            <p>Door: Molovich,
+            <time>29 April, 2011</time>
+            </p>
+            <p>Jack van Gelder: Jongens, we hebben net gekeken naar Max Molovich die, samen met zijn slapende zoon op zoek ging naar Stijloefeningen van... </p>
+				<button class="leesverder">Lees Verder.</button>
+    </article>
+    
+    <article>
+        <h4>Ongeboren</h4>
+            <p>Door: Molovich,
+            <time>29 Maart, 2011</time>
+            </p>
+            <p>Jij bevindt je een paar kilometer verderop in de buik van je moeder. Ik heb je gisteren gezien. Ik zag je armpjes, je beentjes, je naar verhouding enorme...</p>
+				<button class="leesverder">Lees Verder.</button>
+    </article>    
+</section>
+   
+<footer>Powered bij DSDF Seaways 2016</footer>
+    
 </body>
 </html>
