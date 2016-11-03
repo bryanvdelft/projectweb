@@ -1,0 +1,764 @@
+@font-face {
+    font-family: 'DFDS';
+    src: '/fonts/dfds-bold.ttf';
+    src: '/fonts/dfds-light.ttf';
+}
+
+* {
+    box-sizing: border-box;
+    list-style-type: none;
+    outline: none;
+    font-family: DFDS-light;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition:    all 0.2s ease;
+    -ms-transition:     all 0.2s ease;
+    -o-transition:      all 0.2s ease;
+}
+
+body {
+    font-family: 'DFDS';
+    background-color: #e6e6e6;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+/* ----------------
+Header
+------------------*/
+
+header{
+	padding: 1em 0em;
+	box-sizing:border-box;
+	box-shadow: 0 0 0.5em 0 rgba(0, 0, 0, 0.15);
+	height: 6.3em;
+	background-color: #fff;
+}
+
+.nummer{
+    color: #f6861f
+}
+
+header .header-text {
+	max-width: 200em;
+	text-align: center;
+	margin: 0 auto;
+}
+header .header-text h1{
+	float: left;
+	line-height: 2em;
+	margin-left: 0.5em;
+    margin-top: 0em; 
+}
+
+/* header links */
+
+header .header-text a {
+	color: #12253a;
+	text-decoration: none;
+}
+
+header .header-text nav{
+	line-height: 2.5em;
+	float: right;
+}
+
+header .header-text nav a{
+	display: inline-block;
+	padding: 0 0.4em;
+	text-decoration:none;
+	color: #12253a;
+	line-height:1;
+}
+
+header .header-text nav a:hover {
+    background-color: #12253a;
+    color: white;
+}
+
+header .header-text nav a.uitgelicht:hover {
+    background-color: #12253a;
+    color: white;
+}
+
+header .header-text nav a.uitgelicht {
+	background-color: ghostwhite;
+	color: #12253a;
+	border-radius: 0.5em;
+	padding: 0.3em 0.5em;
+}
+
+ul  {
+    display: block;
+    list-style-type: none;
+    text-align: center;
+    margin-right: 2em;
+}
+
+li{
+    display: inline;
+}
+
+/* ----------------
+Header responsive 
+------------------*/
+
+@media screen and (min-width: 16em) and (max-width: 50em) {
+	header {
+		padding: 1em 0;
+		height: 6em;
+        width: ;
+	}
+
+	header .header-text h1 {
+		float: none;
+		margin: 0em; 0 1.4em;
+		text-align: center;
+		font-size: 2.2em;
+		line-height: 1;
+	}
+
+	header .header-text nav {
+		line-height: 1;
+		float:none;
+	}
+
+	header .header-text nav a {
+		font-size: 1em;
+        margin-top: -0.8em;
+	}
+}
+
+/*-----------------------------
+ZOEKEN
+-------------------------------*/
+
+.search-container{
+    display: block;
+    align-self: center;
+    padding: 0.3em;
+}
+
+input#search-bar{
+    background-image: url(images/zoekicoon.png);
+    background-size: 2em;
+    background-repeat: no-repeat;
+    background-position: right;
+    width: 100%;
+    height: 2.8em;
+    padding: 0 1.25em;
+    font-size: 1em;
+    border: 0.1em solid #D0CFCE;
+    &:focus{
+        transition: 0.35s ease;
+        &::-webkit-input-placeholder{
+          transition: opacity 0.45s ease; 
+          opacity: 0;
+         }
+        &::-moz-placeholder {
+          transition: opacity 0.45s ease; 
+          opacity: 0;
+         }
+        &:-ms-placeholder {
+         transition: opacity 0.45s ease; 
+         opacity: 0;
+     }    
+   }
+ }
+
+/* ----------------
+DROPDOWN sorteren
+------------------*/
+
+.sortfilter {
+    display: flex;
+    width: 100%;
+    padding-right: 0.3em;
+}
+
+.onclick-menu-content  {
+    display: flex;
+    flex-direction: column;
+    font-size: 1em;
+    text-align: center;
+    margin-top: 0.4em;
+    width: 47%;
+    
+}
+
+li{
+    display: inline;
+}
+
+.leestijd {
+    margin-right: 2em;
+    font-size: 1em;
+    margin-bottom: -0.1em;
+}
+
+.onclick-menu-sorteren {
+    display: inline-block;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.3em;
+    max-height: 20em;
+    padding: 0.4em;
+    margin-left: 0.23em;
+    width: 100%;
+}
+.onclick-menu-sorteren:before {
+    content: "Sorteren";
+}
+
+.onclick-menu-sorteren:focus {
+    pointer-events: none;
+}
+
+.onclick-menu-sorteren:focus .onclick-menu-content {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.onclick-menu-content {
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+    margin-left: -0.3em;
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0.5s;
+}
+
+li button {
+    border: none;
+    background-color: white;
+    font-size: 0.75em;
+    color: #12253a;
+    text-align: center;
+    margin-right: 2em;
+}
+
+li button:hover{
+    background: #12253a;
+    color: white;
+}
+
+/* ----------------
+DROPDOWN filteren
+------------------*/
+
+li{
+    display: inline;
+}
+
+.onclick-menu-filteren {
+    display: inline-block;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.3em;
+    max-height: 20em;
+    padding: 0.4em;
+    margin-left: 0.3em;
+    width: 100%;
+}
+
+.onclick-menu-filteren:before {
+    content: "Filteren";
+}
+
+.onclick-menu-filteren:focus {
+    pointer-events: none;
+}
+
+.onclick-menu-filteren:focus .onclick-menu-content {
+    opacity: 1;
+    visibility: visible;
+}
+
+.onclick-menu-content {
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0.5s;
+}
+
+.pijlicoon {
+    float: right;
+    width: 1.5em;
+}
+
+/* ----------------
+MAIN
+------------------*/
+
+h2{
+    display: flex;
+    text-align: center; 
+    background-color: white;
+    width: 5em;
+    padding: 0em 0.2em 0.2em 0.5em;
+    margin: 0.4em 0em -0.6em 0.4em;
+    border-radius: 0.4em 0.4em 0 0;
+    
+}
+
+h4{
+    font-size: 1.7em;
+    margin-top: 0em;
+    margin-bottom: 0em;
+    padding-left: 0.2em;
+}
+
+p {
+    margin-top: auto;
+    margin-bottom: 0.5em;
+    font-size: 0.8em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+.lengteverhaal {
+    float: right;
+    background: #91c67d;
+    font-size: 1.2em;
+    padding-left: 1.4em;
+    margin-top: -1.46em;
+    margin-right: -0.03em;
+    -webkit-clip-path: polygon(13% 0, 100% 0%, 100% 100%, 0% 100%);
+}
+
+/* Artikel afbeeldingen */
+.een {
+    background-image: url(images/zombie.jpg); 
+}
+
+.twee {
+    background-image: url(images/commentator.jpg);
+}
+
+.drie {
+    background-image: url(images/kinderboek.jpg);
+}
+
+.vier {
+    background-image: url(images/western.jpg); 
+}
+
+.vijf {
+    background-image: url(images/note.jpg); 
+}
+
+.zes {
+    background-image: url(images/cruijff.jpg); 
+}
+
+article div {
+    background-size: cover;
+    width: 100%;
+    height: 9em;
+    background-repeat: no-repeat;
+    border-radius: 0.5em 0.5em 0 0;
+    background-position: 0;
+    opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+article div:hover {
+    opacity: .7;
+}
+
+/* The Fukol CSS 'grid system' van https://github.com/Heydon/fukol-grids */
+
+.fukol-grid {
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -0.5em;
+    padding-bottom: 1em;
+}
+
+.fukol-grid > * {
+    flex: 1 0 10em;
+    margin: 0.5em;
+    max-width: 100%;
+    border-radius: 0.5em;
+    flex-basis: calc(100% - 1em);
+}
+
+/*  FUKOL STYLES */
+
+.fukol-grid > * {
+    background: white;
+    width: 50%;
+    
+}
+
+@media screen and (min-width: 42em) {
+	.fukol-grid > * {
+     flex-basis: calc(50% - 1em);   
+	}
+}
+
+@media screen and (min-width: 69em) {
+	.fukol-grid > * {
+     flex-basis: calc(30% - 1em);   
+	}
+}
+
+.leesverder {
+    text-transform: uppercase;
+    border: none;
+    background-color: #f6861f;
+    padding: 0.3em 1.5em;
+    margin-left: 0.8em;
+    margin-bottom: 1em;
+    font-size: 0.7em;
+    color: white;
+    -webkit-clip-path: polygon(8% 0, 100% 0%, 100% 100%, 0% 100%);
+    cursor: pointer;
+}
+
+.leesverder:hover {
+    Background color: white;
+    color: #12253a;
+    padding: 0.3em 1.4em;
+    font-size: 0.8em;
+    box-shadow: 0.2em 0.2em #12253a;
+    -webkit-transform: translateX(-3px);
+}
+
+.leesverder:active {
+    padding: 0.6em 1.8em;
+    font-size: 0.7em;
+}
+/* ----------------
+FOOTER
+------------------*/
+
+footer {
+    background-color: #12253a;
+    color: white;
+    padding: 0.1em;
+    text-align: center;
+    
+}
+
+.footerimg {
+    width: 2.1em;
+    margin-left: 0.3em;
+    margin-right: 0.3em;
+    text-align: center;
+    border-radius: 0.3em;
+}
+
+.footerimg:hover {
+    width: 2.25em;
+}
+
+h7 {
+    font-size: 1.4em;
+}
+
+/*----------------
+VERHAAL 1
+-----------------*/
+
+.cruijffmobile {
+    width: 100%;
+    margin-bottom: -0.5em;
+}
+
+@media screen and (min-width: 40em) {
+	.cruijffmobile {
+     display: none;
+	}
+}
+
+.cruijfftablet {
+    display: none;
+    margin-bottom: -0.4em;
+}
+
+@media screen and (min-width: 40em) and (max-width: 63em) {
+	.cruijfftablet {
+        display: block;
+        width: 100%;
+        margin-bottom: -0.4em;
+	}
+}
+
+.cruijffdesktop {
+    display: none;
+}
+
+@media screen and (min-width: 63em) {
+	.cruijffdesktop {
+     width: 100%;
+    display: block;
+	}
+}
+
+/*----------------
+VERHAAL 2
+-----------------*/
+.notitiemobile {
+    width: 100%;
+    margin-bottom: -0.5em;
+}
+
+@media screen and (min-width: 36em) {
+	.notitiemobile {
+     display: none;
+	}
+}
+
+.notitietablet {
+    display: none;
+    margin-bottom: -0.4em;
+}
+
+@media screen and (min-width: 36em) and (max-width: 63em) {
+	.notitietablet {
+        display: block;
+        width: 100%;
+        margin-top: -0.4em;
+	}
+}
+
+.notitiedesktop {
+    display: none;
+}
+
+@media screen and (min-width: 63em) {
+	.notitiedesktop {
+        width: 100%;
+        display: block;
+	}
+}
+
+/*----------------
+VERHAAL 3
+-----------------*/
+
+.zombiemobile {
+    width: 100%;
+    margin-bottom: -0.5em;
+}
+
+@media screen and (min-width: 40em) {
+	.zombiemobile {
+     display: none;
+	}
+}
+
+.zombietablet {
+    display: none;
+    margin-bottom: -0.4em;
+}
+
+@media screen and (min-width: 40em) and (max-width: 63em) {
+	.zombietablet {
+        display: block;
+        width: 100%;
+        margin-top: -0.4em;
+	}
+}
+
+.zombiedesktop {
+    display: none;
+}
+
+@media screen and (min-width: 63em) {
+	.zombiedesktop {
+     width: 100%;
+    display: block;
+	}
+}
+
+/*----------------
+INLOGPAGINA
+-----------------*/
+
+.logo1 {
+    text-align: center;
+    font-size: 4.2em;
+    color: #f6861f;
+    margin-top: 0em;
+    margin-bottom: -0.57em;
+}
+
+.logo2 {
+    text-align: center;
+    font-size: 3em;
+    color: #12253a;
+    margin-top: 0em;
+    margin-bottom: -0.3em;
+}
+
+.loginachtergrond {
+    background-color: white;
+}
+
+h5 {
+    color: #12253a;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 0.3em;
+    margin-top: 0.8em;
+}
+
+.box {
+    background: white;
+    text-align: center;
+    width: 20em;
+    border-radius: 1em;
+    margin-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0em 0em 5em 0em;
+    border: #12253a 0.3em solid; 
+}
+
+.invoer{
+    background:#ecf0f1;
+    border: #ccc 0.2em solid;
+    border-bottom: #ccc 0.2em solid;
+    padding: 0.4em;
+    width:16em;
+    color:#AAAAAA;
+    margin-top: 1em;
+    font-size:1em;
+    border-radius: 0.5em;
+}
+
+.knoppen {
+    float:left;
+    background:#12253a;
+    width: 7.8em;
+    padding: 0.3em;
+    color: white;
+    border-radius: 0.3em;
+    margin-top: 1.2em;
+    margin-bottom: 1em;
+    margin-left: 1.3em;
+    cursor: pointer;
+}
+
+.knoppen:hover{
+  background:#f6861f; 
+}
+
+.vergeten {
+    text-align: center;
+    color:#12253a;
+    font-size: 1em;
+    margin-top: 0.3em;
+}
+
+.klik {
+    color: #f6861f
+}
+
+/*----------------
+AANMELDEN
+-----------------*/
+
+.aanmelden {
+    background: white;
+    border-radius: 1em;
+    width: 20em;
+    border-radius: 1em;
+    margin: 0 auto 0 auto;
+    padding: 0em 0em 5em 0em;
+    border: #12253a 0.3em solid; 
+    margin-top: 2em;
+    text-align: center;
+}
+
+fieldset {
+    border: none;
+}
+
+legend{
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -0.4em;
+}
+
+.aanmeldknop {
+    background:#12253a;
+    width: 9em;
+    padding: 0.4em;
+    color: white;
+    border-radius: 0.3em;
+    margin-top: 1.2em;
+    margin-bottom: -3.5em;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+.aanmeldknop:hover{
+    background:#f6861f; 
+}
+
+input:invalid:focus {    
+    border: 2px solid red;
+    outline: none;
+}
+
+input:valid{
+    border: 2px solid green;
+    outline: none;
+}
+
+/*----------------
+HEART van tutorial http://www.9lessons.info/2015/11/twitter-heart-button-css3-animation.html#block
+-----------------*/
+.heart {
+	    background: url(images/hart.png);
+        float: right;
+        margin-top: -2.5em;
+	    height: 3em;
+	    width: 4.5em;
+	    cursor: pointer;
+        background-size:2900%
+}
+
+.heart:focus{
+    background-position: right;
+	}
+
+    @-webkit-keyframes heartBlast {
+    0% {
+	    background-position: left;
+	}
+	100% {
+	    background-position: right;
+	}
+	}
+	
+
+.heartAnimation {
+        display: inline-block;
+        -webkit-animation-name: heartBlast;
+        animation-name: heartBlast;
+        -webkit-animation-duration: .8s;
+        animation-duration: .8s;
+        -webkit-animation-iteration-count: 1;
+        animation-iteration-count: 1;
+        -webkit-animation-timing-function: steps(28);
+        animation-timing-function: steps(28);
+        background-position: right;
+    }

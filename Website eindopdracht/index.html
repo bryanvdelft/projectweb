@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <title>99 verhalen</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-text">
+            <h1><a href="index.html"><span class="nummer">99</span> Verhalen</a></h1>
+                <nav>
+                    <ul>
+                        <li><a href="#" class="uitgelicht">Verhalen</a></li>
+                        <li><a href="#">Info</a></li>
+                        <li><a href="#">Account</a></li>
+                    </ul>
+                </nav>
+        </div>
+    </header>   
+
+<!-- Zoek balk -->   
+<form class="search-container">
+    <input type="text" id="search-bar" placeholder="Zoeken op auteur, titel, enz">
+    <a href="#"></a>
+</form>
+
+<!-- Sorteren filteren -->  
+<div class="sortfilter">
+    <div tabindex="0" class="onclick-menu-filteren">
+        <img class="pijlicoon" src="images/pijlomlaag.png" alt="pijlomlaag">
+            <ul class="onclick-menu-content">
+                <li><span class="leestijd">Leestijd</span></li>
+                <li><button>0  > 5 min</button></li>
+                <li><button>5  > 10 min</button></li>
+                <li><button>10 > langer</button></li>
+            </ul>
+    </div> 
+    
+    <div tabindex="0" class="onclick-menu-sorteren">
+        <img class="pijlicoon" src="images/pijlomlaag.png" alt="pijlomlaag">
+            <ul class="onclick-menu-content">
+                <li><button>Aanraders</button></li>
+                <li><button>Leestijd laag-hoog</button></li>
+                <li><button>Leestijd hoog-laag</button></li>
+            </ul>
+    </div> 
+</div>
+    
+<section>
+    <h2>Verhalen</h2>
+        <div class="fukol">  
+        <div class="fukol-grid">
+            <article>
+                <div class="vijf"></div>
+                    <p class="lengteverhaal">5min</p>
+                        <h4>Notitie</h4>
+                            <div class="heart like1" rel="like"></div>
+                            <p>Door: Molovich, 2 februari, 2011 </p>
+                            <p>Bus 21, rond het middaguur. Halte Centraal Station. Mijn zoon slaapt in zijn kinderwagen. Ik loop langs de winderige bouwputten naar de Openbare Bibliotheek. Voor de....</p>
+                            <a href="notitie.html">
+                                <button class="leesverder">Lees Verder.</button>
+                            </a>
+            </article>
+            
+            <article>
+                <div class="zes"></div>
+                    <p class="lengteverhaal">10min</p>
+                        <h4>Johan Cruijff</h4>
+                            <div class="heart like1" rel="like"></div>
+                            <p>Door: Molovich, 11 februari, 2011 </p>
+                            <p>In principe is het dus zo dat je uit Bus 21 stapte en op weg was naar de Openbare Bibliotheek om Stijloefeningen van Raymond Queneau te lenen. Je zocht er dus zeg maar al...</p>
+                            <a href="cruijf.html">
+                                <button class="leesverder">Lees Verder.</button>
+                            </a>
+            </article>
+            
+            <article>
+                <div class="een"></div>
+                        <p class="lengteverhaal">15min</p>
+                        <h4>Zombie</h4>
+                            <div class="heart like1" rel="like"></div>
+                            <p>Door: Molovich, 21 juni, 2011 </p>
+                            <p>Duizenden hongerige ondoden lopen zielloos over het stations- plein. Op zoek naar voedsel, naar half vergane hondenlijken, naar vers mensenvlees. Het is gekkenwerk...</p>
+                            <a href="zombie.html">
+                                <button class="leesverder">Lees Verder.</button>
+                            </a>
+            </article>
+            
+            <article>
+                <div class="twee"></div>
+                        <p class="lengteverhaal">10min</p>
+                        <h4>Sportcommentaar</h4>
+                            <div class="heart like1" rel="like"></div>
+                            <p>Door: Molovich, 15 mei, 2011 </p>
+                            <p>En daar stopt lijn 21 op exact de juiste tijd op precies de juiste plek op het Stationsplein. De deuren gaat open, de spanning is te snijden. En wie komt daar als eerste uit?...</p>
+                            <button class="leesverder">Lees Verder.</button>
+            </article>
+            
+            <article>
+                <div class="drie"></div>
+                    <p class="lengteverhaal">5min</p>
+                        <h4>Kinderboek</h4>
+                            <div class="heart like1" rel="like"></div>
+                            <p>Door: Molovich, 27 mei, 2011 </p>
+                            <p>Kijk, daar gaat Max. Dag Max! Hij stapt uit de bus. Wat duwt hij daar vooruit? Jawel, een heuse kinderwagen! En wat voor één! Een groene! Zijn zoontje ligt er in te slapen...</p>
+                            <button class="leesverder">Lees Verder.</button>
+            </article>
+            
+            <article>
+                <div class="vier"></div>
+                    <p class="lengteverhaal">15min</p>
+                        <h4>Western</h4>
+                            <div class="heart like1" rel="like"></div>
+                            <p>Door: Molovich, 23 mei, 2011 </p>
+                            <p>Een stofwolk ontneemt het zicht op de wegrijdende postkoets, die mij net heeft afgezet voor het station van dit door god verlaten prairydorp. Een tumbleweed...</p>
+                            <button class="leesverder">Lees Verder.</button>
+            </article>
+        </div>
+        </div>
+</section> 
+
+    
+<footer>
+    <h7>Volg ons</h7>
+        <ul class="social">
+            <li><a href="#"><img class="footerimg" src="images/twitter.png" alt="twittericoon"></a></li>
+            <li><a href="#"><img class="footerimg" src="images/facebook.png" alt="facebookicoon"></a></li>
+            <li><a href="#"><img class="footerimg" src="images/instagram.png" alt="instagramicoon"></a></li>
+            <li><a href="#"><img class="footerimg" src="images/pinterest.png" alt="pinteresticoon"></a></li>
+            <li><a href="#"><img class="footerimg" src="images/googleplus.png" alt="googleplusicoon"></a></li>
+            <li><a href="#"><img class="footerimg" src="images/youtube.png" alt="youtubeicoon"></a></li>
+        </ul>
+    <p>Powered bij DSDF Seaways 2016</p> 
+</footer>
+
+</body>
+</html>
+    
+    
